@@ -1,0 +1,204 @@
+/* --- NAVBAR LAYOUT FIX --- */
+.nav-right-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.nav-links {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem;
+    background-color: var(--color-primary-bg); 
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+body.dark-mode .hero {
+    background: radial-gradient(circle at top, #2D2D2D 0%, #121212 100%);
+}
+.hero-content {
+    max-width: 800px;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    color: var(--color-text);
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: color-mix(in srgb, var(--color-text) 70%, transparent);
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+}
+.hero-cta-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    border: none;
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    box-shadow: 0 10px 20px -5px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+.hero-cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -5px color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+.hero-cta-button .fas {
+    transition: transform 0.3s ease;
+}
+.hero-cta-button:hover .fas {
+    transform: translateX(5px);
+}
+
+/* --- SLIDING TEXT ANIMATION --- */
+.sliding-text-container {
+    display: inline-block;
+    height: 4.5rem;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.sliding-text-item {
+    display: block;
+    color: var(--color-accent);
+    animation: slideUp 6s infinite ease-in-out;
+}
+@keyframes slideUp {
+    0%, 28% { transform: translateY(0); }
+    33%, 61% { transform: translateY(-4.5rem); }
+    66%, 94% { transform: translateY(-9rem); }
+    100% { transform: translateY(0); }
+}
+
+/* --- PAGE SECTIONS (About, Features) --- */
+.page-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+.alt-bg {
+    background-color: var(--color-secondary-bg);
+}
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+
+/* --- FEATURE CARDS --- */
+.feature-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+.feature-card {
+    background-color: var(--color-primary-bg);
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+.card-icon {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+
+/* --- CONTACT FORM STYLES --- */
+.contact-form {
+    max-width: 700px;
+    margin: 3rem auto 0 auto;
+    text-align: left;
+}
+.contact-form-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+.contact-form textarea {
+    resize: vertical;
+    margin-bottom: 1.5rem;
+}
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-secondary-bg);
+    color: color-mix(in srgb, var(--color-text) 60%, transparent);
+}

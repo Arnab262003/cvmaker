@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaCraft - Professional Profile Builder</title>
+    
+    <!-- Link to Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Link to SHARED styles first -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- THEN, link to HOMEPAGE-SPECIFIC styles -->
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body class="dark-mode"> <!-- Start in dark mode by default for aesthetic -->
+
+<div class="page-container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="landing.html" class="nav-logo">
+                <img src="images/logo-icon.png" alt="PersonaCraft Logo">
+                <span>PersonaCraft</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right-group">
+                <a href="pages/login.html" class="nav-btn">Log In</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Build Your
+                <span class="sliding-text-container">
+                    <span class="sliding-text-item">Stunning CV.</span>
+                    <span class="sliding-text-item">Portfolio Site.</span>
+                    <span class="sliding-text-item">Professional Brand.</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">Stop wrestling with templates. Start creating a professional presence that gets you noticed. Free, fast, and designed for success.</p>
+            <a href="pages/login.html" class="hero-cta-button">
+                Get Started for Free <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Features Section -->
+        <section id="features" class="page-section alt-bg">
+            <div class="section-container">
+                <h2 class="section-title">Why Choose PersonaCraft?</h2>
+                <p class="section-description">PersonaCraft is more than just a tool; it's your personal branding partner. We provide the features you need to stand out in a competitive market, without the hassle.</p>
+                <div class="feature-cards-container">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt card-icon"></i>
+                        <h3 class="card-title">Lightning Fast</h3>
+                        <p class="card-text">Go from zero to a professional CV and portfolio site in minutes. Our intuitive interface removes all friction.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-palette card-icon"></i>
+                        <h3 class="card-title">Elegant Templates</h3>
+                        <p class="card-text">Choose from professionally designed, ATS-friendly templates that look stunning in both light and dark modes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code card-icon"></i>
+                        <h3 class="card-title">Export Your Code</h3>
+                        <p class="card-text">You're not locked in. Generate and download the complete HTML & CSS for your personal portfolio website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Mission</h2>
+                <p class="section-description">
+                    For students and professionals, creating a compelling online presence is essential but often time-consuming. PersonaCraft was built to solve this problem. Our mission is to empower individuals to craft a professional identity effortlessly, providing tools that are both powerful and simple to use. We believe everyone deserves to present their best self to the world, and we're here to make that happen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section alt-bg">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">Have a question, suggestion, or just want to say hello? We'd love to hear from you.</p>
+                <form class="contact-form">
+                    <div class="contact-form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="nav-btn hero-cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PersonaCraft. All rights reserved. By-Arnab Patra</p>
+    </footer>
+</div>
+
+<script src="js/landing.js"></script>
+</body>
+</html>
+
